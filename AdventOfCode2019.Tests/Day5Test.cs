@@ -29,5 +29,32 @@ namespace AdventOfCode2019.Tests
             var result = testIO.GetAllInput().FirstOrDefault() ?? "";
             result.ShouldBe(expectedOutput);
         }
+
+        [Theory]
+        // Equal
+        [InlineData("3,9,8,9,10,9,4,9,99,-1,8", "8", "1")]
+        [InlineData("3,9,8,9,10,9,4,9,99,-1,8", "7", "0")]
+        [InlineData("3,3,1108,-1,8,3,4,3,99,-1,8", "8", "1")]
+        [InlineData("3,3,1108,-1,8,3,4,3,99,-1,8", "7", "0")]
+        // Less than
+        [InlineData("3,9,7,9,10,9,4,9,99,-1,8", "7", "1")]
+        [InlineData("3,9,7,9,10,9,4,9,99,-1,8", "9", "0")]
+        [InlineData("3,3,1107,-1,8,3,4,3,99", "7", "1")]
+        [InlineData("3,3,1107,-1,8,3,4,3,99", "9", "0")]
+        [InlineData("3,12,6,12,15,1,13,14,13,4,13,99,-1,0,1,9", "1", "1")]
+        [InlineData("3,12,6,12,15,1,13,14,13,4,13,99,-1,0,1,9", "0", "0")]
+        [InlineData("3,3,1105,-1,9,1101,0,0,12,4,12,99,1", "1", "1")]
+        [InlineData("3,3,1105,-1,9,1101,0,0,12,4,12,99,1", "0", "0")]
+        public void TestPart2(string program, string input, string expectedOutput)
+        {
+            var splitInput = input.Split(",", StringSplitOptions.RemoveEmptyEntries);
+            var testIO = new TestIOSystem(splitInput);
+
+            var day1 = new Day5Part2(testIO);
+            var val = day1.RunProgram(program);
+
+            var result = testIO.GetAllInput().FirstOrDefault() ?? "";
+            result.ShouldBe(expectedOutput);
+        }
     }
 }
