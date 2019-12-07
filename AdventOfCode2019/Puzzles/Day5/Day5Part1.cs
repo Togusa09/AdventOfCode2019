@@ -49,28 +49,6 @@ namespace AdventOfCode2019.Puzzles.Day5
             _ioSystem = ioSystem;
         }
 
-        //public string GetResult()
-        //{
-        //    for(var i = 0; i < 100; i++)
-        //    for (var j = 0; j < 100; j++)
-        //    {
-        //        var content = File.ReadAllText("InputFiles\\Day2Input.txt");
-
-        //        var extractedProgram = content.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-        //            .Select(x => int.Parse(x))
-        //            .ToArray();
-
-        //        extractedProgram[1] = i;
-        //        extractedProgram[2] = j;
-
-        //        var result = RunProgram(extractedProgram)[0];
-
-        //        if (result == 19690720) return $"{i:00}{j:00}";
-        //    }
-
-        //    throw new Exception();
-        //}
-
         public string SolveForFile()
         {
             var content = File.ReadAllText("InputFiles\\Day5Input.txt");
