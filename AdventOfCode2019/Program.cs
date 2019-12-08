@@ -5,6 +5,7 @@ using AdventOfCode2019.Puzzles.Day3;
 using AdventOfCode2019.Puzzles.Day4;
 using AdventOfCode2019.Puzzles.Day5;
 using AdventOfCode2019.Puzzles.Day6;
+using AdventOfCode2019.Puzzles.Day7;
 
 namespace AdventOfCode2019
 {
@@ -29,6 +30,8 @@ namespace AdventOfCode2019
 
             //var day6Part1 = new Day6Part1().SolveForFile();
             //var day6Part2 = new Day6Part2().SolveForFile();
+
+            var day7Part1 = new Day7Part1().SolveForFile();
 
             Console.WriteLine("Hello World!");
         }

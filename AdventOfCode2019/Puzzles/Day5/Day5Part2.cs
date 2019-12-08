@@ -7,8 +7,8 @@ namespace AdventOfCode2019.Puzzles.Day5
 {
     public class Day5Part2
     {
-        private IIOSystem _ioSystem;
-        public Day5Part2(IIOSystem ioSystem)
+        private IIoSystem _ioSystem;
+        public Day5Part2(IIoSystem ioSystem)
         {
             _ioSystem = ioSystem;
         }
