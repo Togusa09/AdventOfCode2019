@@ -31,7 +31,8 @@ namespace AdventOfCode2019
             //var day6Part1 = new Day6Part1().SolveForFile();
             //var day6Part2 = new Day6Part2().SolveForFile();
 
-            var day7Part1 = new Day7Part1().SolveForFile();
+            //var day7Part1 = new Day7Part1().SolveForFile();
+            var day7Part1 = new Day7Part2().SolveForFile();
 
             Console.WriteLine("Hello World!");
         }
