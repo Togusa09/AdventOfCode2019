@@ -5,13 +5,7 @@ using System.Linq;
 
 namespace AdventOfCode2019.Puzzles.Day5
 {
-    public interface IIOSystem
-    {
-        string ReadIn();
-        void WriteOut(string value);
-    }
-
-    public class TestIOSystem : IIOSystem
+    public class TestIOSystem : IIoSystem
     {
         Stack<string> _input = new Stack<string>();
         List<string> _output = new List<string>();
@@ -43,8 +37,8 @@ namespace AdventOfCode2019.Puzzles.Day5
 
     public class Day5Part1
     {
-        private IIOSystem _ioSystem;
-        public Day5Part1(IIOSystem ioSystem)
+        private IIoSystem _ioSystem;
+        public Day5Part1(IIoSystem ioSystem)
         {
             _ioSystem = ioSystem;
         }
