@@ -17,25 +17,30 @@ namespace AdventOfCode2019.Puzzles.Day10
 
         public int Solve(string content)
         {
+            //(28, 22)
             var map = content.Split("\n")
-                .Select(x => x.Select(x => x).ToArray())
                 .ToArray();
 
             int mostVisible = 0;
+            var coords = (0, 0);
 
             for(var x = 0; x < map.Length; x++)
             for(var y = 0; y < map[x].Length; y++)
             {
-                if (map[x][y] == '.') continue;
+                if (map[y][x] == '.') continue;
 
                 var visible = CalcVisible(map, x, y);
-                if (visible > mostVisible) mostVisible = visible;
+                if (visible > mostVisible)
+                {
+                    mostVisible = visible;
+                    coords = (x, y);
+                }
             }
 
             return mostVisible;
         }
 
-        private int CalcVisible(char[][] map, int xPos, int yPos)
+        private int CalcVisible(string[] map, int xPos, int yPos)
         {
             //var angles = new double[map.Length * map[0].Length];
             var angles = new List<double>();
@@ -44,7 +49,7 @@ namespace AdventOfCode2019.Puzzles.Day10
             for (var x = 0; x < map.Length; x++)
             for (var y = 0; y < map[x].Length; y++)
             {
-                if (map[x][y] == '.') continue;
+                if (map[y][x] == '.') continue;
                 if (x == xPos && y == yPos) continue;
 
               
