@@ -1,6 +1,7 @@
 ﻿using System;
 using AdventOfCode2019.Puzzles;
 using AdventOfCode2019.Puzzles.Day10;
+using AdventOfCode2019.Puzzles.Day11;
 using AdventOfCode2019.Puzzles.Day2;
 using AdventOfCode2019.Puzzles.Day3;
 using AdventOfCode2019.Puzzles.Day4;
@@ -44,8 +45,12 @@ namespace AdventOfCode2019
             //var day9Part2 = new Day9Part2().SolveForFile();
 
             //var day10Part1 = new Day10Part1().SolveForFile();
-            var day10Part2 = new Day10Part2().SolveForFile();
-            //Console.WriteLine(day10Part2);
+            //var day10Part2 = new Day10Part2().SolveForFile();
+
+            //var day11Part1 = new Day11Part1().SolveForFile();
+            var day11Part2 = new Day11Part2().SolveForFile();
+            Console.WriteLine(day11Part2);
+
 
             Console.WriteLine("Hello World!");
         }
