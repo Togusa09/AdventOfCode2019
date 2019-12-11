@@ -29,7 +29,7 @@ namespace AdventOfCode2019.Puzzles.Day3
 
         public int GetResult()
         {
-            var input = File.ReadAllText(@"InputFiles/Day3Input.txt");
+            var input = File.ReadAllText(@"InputFiles/Day03Input.txt");
             return Solve(input);
         }
 

@@ -2,7 +2,7 @@
 {
     public class Day1Part2 : ISummable
     {
-        public string Filename => "Day1Input.txt";
+        public string Filename => "Day01Input.txt";
 
         public int Calculate(int mass)
         {

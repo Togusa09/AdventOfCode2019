@@ -5,18 +5,28 @@ using System.Linq;
 namespace AdventOfCode2019.Puzzles.Day2
 {
 
-    public class Day2Part1
+    public class Day2Part2
     {
-        public int GetResult()
+        public string GetResult()
         {
-            var content = File.ReadAllText("InputFiles\\Day2Input.txt");
+            for(var i = 0; i < 100; i++)
+            for(var j = 0; j < 100; j++)
+            {
+                var content = File.ReadAllText("InputFiles\\Day02Input.txt");
 
-            var extractedProgram = content.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(x => int.Parse(x))
-                .ToArray();
+                var extractedProgram = content.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                    .Select(x => int.Parse(x))
+                    .ToArray();
 
+                extractedProgram[1] = i;
+                extractedProgram[2] = j;
 
-            return RunProgram(extractedProgram)[0];
+                var result = RunProgram(extractedProgram)[0];
+
+                if (result == 19690720) return $"{i:00}{j:00}";
+            }
+
+            throw new Exception();
         }
 
         public string RunProgram(string input)

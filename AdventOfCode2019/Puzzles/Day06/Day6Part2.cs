@@ -9,7 +9,7 @@ namespace AdventOfCode2019.Puzzles.Day6
     {
         public int SolveForFile()
         {
-            var content = File.ReadAllText("InputFiles\\Day6Input.txt");
+            var content = File.ReadAllText("InputFiles\\Day06Input.txt");
             return Solve(content);
         }
 

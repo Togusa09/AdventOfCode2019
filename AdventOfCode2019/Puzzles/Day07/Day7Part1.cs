@@ -20,7 +20,7 @@ namespace AdventOfCode2019.Puzzles.Day7
                 var t = new[] {amp1Phase, amp2Phase, amp3Phase, amp4Phase, amp5Phase}.Distinct().Count();
                 if (t != 5) continue;
 
-                var content = File.ReadAllText("InputFiles\\Day7Input.txt");
+                var content = File.ReadAllText("InputFiles\\Day07Input.txt");
                 var result = RunProgram(content, $"{amp1Phase},{amp2Phase},{amp3Phase},{amp4Phase},{amp5Phase}");
                 if (result > highestVal) highestVal = result;
             }

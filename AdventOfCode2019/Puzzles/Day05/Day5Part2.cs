@@ -16,7 +16,7 @@ namespace AdventOfCode2019.Puzzles.Day5
 
         public string SolveForFile()
         {
-            var content = File.ReadAllText("InputFiles\\Day5Input.txt");
+            var content = File.ReadAllText("InputFiles\\Day05Input.txt");
 
             return RunProgram(content);
         }
